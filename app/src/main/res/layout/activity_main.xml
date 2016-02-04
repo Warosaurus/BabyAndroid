@@ -7,10 +7,37 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.war.babyandroid.MainActivity">
+    tools:context=".activities.MainActivity"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true">
 
-    <TextView
+    <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:id="@+id/stringList"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/addStringButton" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add String"
+        android:id="@+id/addStringButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/stringList"
+        android:background="@color/colorPrimary"
+        android:textColor="#fff"
+        android:padding="10dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addStringET"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/addStringButton"
+        android:inputType="text"
+        android:hint="Add Text HERE!"
+        android:layout_marginRight="10dp" />
 </RelativeLayout>
